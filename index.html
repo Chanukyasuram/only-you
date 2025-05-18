@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only For You</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.10.2/build/player/lottie.min.js"></script>
+</head>
+<body>
+  <div class="audio-control">
+    <button id="toggleAudio" aria-label="Toggle Audio">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+    </button>
+  </div>
+
+  <div class="container">
+    <div class="diary-container">
+      <div id="diary-animation" class="diary-animation"></div>
+      <button id="openDiary" class="open-diary-btn">Click to open the diary</button>
+    </div>
+
+    <div id="content" class="content hidden">
+      <h1 class="title">Only For You...</h1>
+      
+      <div class="login-container">
+        <p class="riddle">Five letters form the sound of silence… and every heartbeat I dared not say aloud.</p>
+        <p class="riddle">It begins like 'hope', ends like 'sky' — in between, the light I saw every day.</p>
+        <p class="riddle">They called you this when the sun rose, and I never called you anything else in my dreams.</p>
+        
+        <div class="input-container">
+          <input type="text" id="nameInput" placeholder="Who am I speaking to?" autocomplete="off">
+          <button id="unlockBtn" class="btn unlock-btn">Unlock</button>
+        </div>
+        
+        <p id="errorMessage" class="error-message hidden">Try in your next birth.</p>
+      </div>
+    </div>
+  </div>
+
+  <audio id="backgroundMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/02/28/audio_c5b695c5c5.mp3?filename=emotional-piano-112623.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/music.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* Main Styles - Shared across pages */
+:root {
+  --primary-color: #d23669;
+  --secondary-color: #4a154b;
+  --accent-color: #f8c630;
+  --light-color: #f9f5f6;
+  --dark-color: #2c2c54;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-heading: 'Dancing Script', cursive;
+  --font-body: 'Lora', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f9f5f6;
+  background-image: radial-gradient(#d23669 0.5px, #f9f5f6 0.5px);
+  background-size: 10px 10px;
+  color: var(--dark-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(210, 54, 105, 0.2);
+}
+
+.btn:hover {
+  background-color: #b92d5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(210, 54, 105, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.audio-control {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.audio-control button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.audio-control button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.audio-control.muted svg {
+  color: #aaa;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+}
